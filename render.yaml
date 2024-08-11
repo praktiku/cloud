@@ -1,0 +1,16 @@
+services:
+  # A Docker web service
+  - type: web
+    name: Ngrok
+    env: docker
+    repo: https://github.com/praktiku/cloud/.git
+    region: 'United State'
+    plan: free # optional (defaults to starter)
+    healthCheckPath: /
+    envVars:
+      - key: 80 # ngrok port
+        value: 22
+      - key: 2Ib3EYyx0CNoTW8nIqnh4iDUKz4_3zDFfXYzmHEovskXikrab
+        sync: false
+      - key: Singapore # ngrok region
+        sync: false
